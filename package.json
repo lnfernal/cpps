@@ -1,0 +1,54 @@
+{
+  "name": "pirocapenguin",
+  "version": "1.0.2",
+  "description": "Aplicativo Desktop para PirocaPenguin",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "make-win": "electron-builder build --win --publish never",
+    "make-mac": "electron-builder build --mac --publish never",
+    "make-linux": "electron-builder build --linux --publish never",
+    "make-win-publish": "electron-builder build --win --publish onTagOrDraft",
+    "make-mac-publish": "electron-builder build --mac --publish onTagOrDraft",
+    "make-linux-publish": "electron-builder build --linux --publish onTagOrDraft"
+  },
+  "bugs": {
+    "url": "https://github.com/frostygg/desktop/issues"
+  },
+  "homepage": "https://github.com/frostygg/desktop#readme",
+  "repository": "https://github.com/frostygg/desktop",
+  "author": "daniel11420/The Frosty Development Team",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "electron": "^8.5.2",
+    "electron-builder": "^22.7.0"
+  },
+  "dependencies": {
+    "discord-rpc": "^3.1.0",
+    "electron-is-dev": "^1.1.0",
+    "electron-updater": "^4.2.0",
+    "fs": "0.0.1-security",
+    "minimist": "^1.2.5"
+  },
+  "build": {
+    "appId": "com.gmoreira05.cpps",
+    "productName": "Piroca Penguin",
+    "asar": "false",
+    "win": {
+      "publish": "github"
+    },
+    "mac": {
+      "publish": "github"
+    },
+    "linux": {
+      "target": "AppImage",
+      "publish": "github"
+    },
+    "dmg": {
+      "window": {
+        "width": "540",
+        "height": "380"
+      }
+    }
+  }
+}
